@@ -1,0 +1,34 @@
+{
+  "name": "superpowers",
+  "version": "1.0.0",
+  "description": "Superpowers - Superhero Power Comparison App for API Test Automation Workshop",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
+    "seed": "npm run seed --workspace=backend",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend"
+  },
+  "keywords": [
+    "superhero",
+    "villain",
+    "api-testing",
+    "graphql",
+    "k6",
+    "rest",
+    "workshop",
+    "test-automation"
+  ],
+  "author": "Anaïs van Asselt",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

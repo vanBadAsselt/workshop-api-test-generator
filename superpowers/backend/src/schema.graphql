@@ -1,0 +1,108 @@
+type Character {
+  id: ID!
+  name: String!
+  slug: String!
+  powerstats: Powerstats!
+  biography: Biography!
+  appearance: Appearance!
+  work: Work!
+  connections: Connections!
+  image: Image!
+  totalPower: Int!
+}
+
+type Powerstats {
+  intelligence: String!
+  strength: String!
+  speed: String!
+  durability: String!
+  power: String!
+  combat: String!
+}
+
+type Biography {
+  fullName: String!
+  alterEgos: String!
+  aliases: [String!]!
+  placeOfBirth: String!
+  firstAppearance: String!
+  publisher: String
+  alignment: String!
+}
+
+type Appearance {
+  gender: String!
+  race: String
+  height: [String!]!
+  weight: [String!]!
+}
+
+type Work {
+  occupation: String!
+  base: String!
+}
+
+type Connections {
+  groupAffiliation: String!
+  relatives: String!
+}
+
+type Image {
+  url: String!
+}
+
+type CharacterConnection {
+  characters: [Character!]!
+  totalCount: Int!
+  hasMore: Boolean!
+}
+
+enum SortOption {
+  NAME_ASC
+  NAME_DESC
+  POWER_ASC
+  POWER_DESC
+}
+
+type Query {
+  """
+  Search characters by name and filter by alignment.
+  Returns paginated results.
+  """
+  searchCharacters(
+    searchTerm: String
+    alignment: String
+    sortBy: SortOption
+    limit: Int
+    offset: Int
+  ): CharacterConnection!
+
+  """
+  Get a single character by ID
+  """
+  getCharacter(id: ID!): Character
+
+  """
+  Get all characters filtered by alignment (good/bad/neutral)
+  """
+  getCharactersByAlignment(alignment: String!): [Character!]!
+
+  """
+  Get a random character
+  """
+  getRandomCharacter: Character!
+}
+
+type Mutation {
+  """
+  Rate a character (mock mutation for workshop demo)
+  """
+  rateCharacter(id: ID!, rating: Int!): RatingResult!
+}
+
+type RatingResult {
+  id: ID!
+  rating: Int!
+  totalRatings: Int!
+  message: String!
+}

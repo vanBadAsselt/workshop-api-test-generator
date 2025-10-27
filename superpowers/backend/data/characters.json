@@ -1,0 +1,2402 @@
+{
+  "characters": [
+    {
+      "id": "1000",
+      "name": "Batman",
+      "slug": "batman",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "26",
+        "speed": "27",
+        "durability": "50",
+        "power": "47",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Bruce Wayne",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Batman",
+          "Dark Knight",
+          "World's Greatest Detective"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Detective Comics #27",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "210 lb",
+          "95 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Businessman",
+        "base": "Batcave, Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League, Batman Family",
+        "relatives": "Thomas Wayne (father, deceased), Martha Wayne (mother, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Batman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1001",
+      "name": "Superman",
+      "slug": "superman",
+      "powerstats": {
+        "intelligence": "94",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Clark Kent",
+        "alterEgos": "Superman Prime One-Million",
+        "aliases": [
+          "Clark Joseph Kent",
+          "The Man of Steel",
+          "the Man of Tomorrow"
+        ],
+        "placeOfBirth": "Krypton",
+        "firstAppearance": "Action Comics #1",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Kryptonian",
+        "height": [
+          "6'3",
+          "191 cm"
+        ],
+        "weight": [
+          "225 lb",
+          "101 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Reporter",
+        "base": "Metropolis"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League, Daily Planet",
+        "relatives": "Lois Lane (wife), Jon Kent (son)"
+      },
+      "image": {
+        "url": "https://robohash.org/Superman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1002",
+      "name": "Wonder Woman",
+      "slug": "wonder-woman",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "100",
+        "speed": "79",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Diana Prince",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Princess Diana",
+          "Princess of the Amazons"
+        ],
+        "placeOfBirth": "Themyscira",
+        "firstAppearance": "All Star Comics #8",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Amazon",
+        "height": [
+          "6'0",
+          "183 cm"
+        ],
+        "weight": [
+          "165 lb",
+          "74 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Princess",
+        "base": "Themyscira, Gateway City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League, Justice League Dark",
+        "relatives": "Hippolyta (mother)"
+      },
+      "image": {
+        "url": "https://robohash.org/Wonder+Woman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1003",
+      "name": "Joker",
+      "slug": "joker",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "10",
+        "speed": "12",
+        "durability": "60",
+        "power": "43",
+        "combat": "90"
+      },
+      "biography": {
+        "fullName": "Jack Napier",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Clown Prince of Crime",
+          "Harlequin of Hate",
+          "Jack Napier"
+        ],
+        "placeOfBirth": "Unknown",
+        "firstAppearance": "Batman #1",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'5",
+          "196 cm"
+        ],
+        "weight": [
+          "192 lb",
+          "86 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Serial Killer",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Injustice Gang, Injustice League",
+        "relatives": "Jeannie (wife, deceased), Unborn son (deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Joker.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1004",
+      "name": "Iron Man",
+      "slug": "iron-man",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "85",
+        "speed": "58",
+        "durability": "85",
+        "power": "100",
+        "combat": "64"
+      },
+      "biography": {
+        "fullName": "Tony Stark",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Iron Knight",
+          "Hogan Potts",
+          "Spare Parts Man"
+        ],
+        "placeOfBirth": "Long Island, New York",
+        "firstAppearance": "Tales of Suspense #39",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'1",
+          "185 cm"
+        ],
+        "weight": [
+          "225 lb",
+          "101 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Inventor, Industrialist, Superhero",
+        "base": "Stark Tower, New York City"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, S.H.I.E.L.D.",
+        "relatives": "Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Iron+Man.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1005",
+      "name": "Spider-Man",
+      "slug": "spider-man",
+      "powerstats": {
+        "intelligence": "90",
+        "strength": "55",
+        "speed": "67",
+        "durability": "75",
+        "power": "74",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Peter Parker",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Spiderman",
+          "Bag-Man",
+          "Black Marvel"
+        ],
+        "placeOfBirth": "New York City",
+        "firstAppearance": "Amazing Fantasy #15",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "5'10",
+          "178 cm"
+        ],
+        "weight": [
+          "165 lb",
+          "74 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Freelance Photographer",
+        "base": "New York City"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, formerly The New Fantastic Four",
+        "relatives": "May Parker (aunt), Ben Parker (uncle, deceased), Mary Jane Watson (wife)"
+      },
+      "image": {
+        "url": "https://robohash.org/Spider-Man.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1006",
+      "name": "Hulk",
+      "slug": "hulk",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "100",
+        "speed": "63",
+        "durability": "100",
+        "power": "98",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Bruce Banner",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Annihilator",
+          "Captain Universe",
+          "Joe Fixit",
+          "Mr. Fixit"
+        ],
+        "placeOfBirth": "Dayton, Ohio",
+        "firstAppearance": "Incredible Hulk #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human / Radiation",
+        "height": [
+          "7'0",
+          "213 cm"
+        ],
+        "weight": [
+          "1400 lb",
+          "630 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Nuclear Physicist",
+        "base": "Hulkbuster Base"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, Defenders",
+        "relatives": "Betty Ross (wife)"
+      },
+      "image": {
+        "url": "https://robohash.org/Hulk.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1007",
+      "name": "Thanos",
+      "slug": "thanos",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "100",
+        "speed": "83",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Thanos",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "The Mad Titan",
+          "Masterlord",
+          "The Overmaster"
+        ],
+        "placeOfBirth": "Titan",
+        "firstAppearance": "Iron Man #55",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Eternal",
+        "height": [
+          "6'7",
+          "200 cm"
+        ],
+        "weight": [
+          "985 lb",
+          "443 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Conqueror, Warlord",
+        "base": "Sanctuary"
+      },
+      "connections": {
+        "groupAffiliation": "Infinity Watch",
+        "relatives": "A'lars (father), Sui-San (mother, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Thanos.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1008",
+      "name": "Captain America",
+      "slug": "captain-america",
+      "powerstats": {
+        "intelligence": "69",
+        "strength": "19",
+        "speed": "38",
+        "durability": "55",
+        "power": "60",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Steve Rogers",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Nomad",
+          "The Captain"
+        ],
+        "placeOfBirth": "New York City",
+        "firstAppearance": "Captain America Comics #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "240 lb",
+          "108 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "New York City"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, S.H.I.E.L.D.",
+        "relatives": "Joseph (father, deceased), Sarah (mother, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Captain+America.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1009",
+      "name": "Black Widow",
+      "slug": "black-widow",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "13",
+        "speed": "33",
+        "durability": "30",
+        "power": "36",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Natasha Romanoff",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Natalie Rushman",
+          "Nat",
+          "Tsarina",
+          "Oktober"
+        ],
+        "placeOfBirth": "Stalingrad, Russia",
+        "firstAppearance": "Tales of Suspense #52",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'7",
+          "170 cm"
+        ],
+        "weight": [
+          "131 lb",
+          "59 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Spy, Adventurer",
+        "base": "Avengers Tower"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, S.H.I.E.L.D.",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Black+Widow.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1010",
+      "name": "Thor",
+      "slug": "thor",
+      "powerstats": {
+        "intelligence": "69",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Thor Odinson",
+        "alterEgos": "Rune King Thor",
+        "aliases": [
+          "Donald Blake",
+          "Sigurd Jarlson",
+          "Jake Olson"
+        ],
+        "placeOfBirth": "Asgard",
+        "firstAppearance": "Journey into Mystery #83",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Asgardian",
+        "height": [
+          "6'6",
+          "198 cm"
+        ],
+        "weight": [
+          "640 lb",
+          "288 kg"
+        ]
+      },
+      "work": {
+        "occupation": "King of Asgard",
+        "base": "Asgard"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, Asgard",
+        "relatives": "Odin (father), Frigga (mother), Loki (adoptive brother)"
+      },
+      "image": {
+        "url": "https://robohash.org/Thor.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1011",
+      "name": "Loki",
+      "slug": "loki",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "63",
+        "speed": "46",
+        "durability": "85",
+        "power": "100",
+        "combat": "60"
+      },
+      "biography": {
+        "fullName": "Loki Laufeyson",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "God of Mischief",
+          "Gem-Keeper"
+        ],
+        "placeOfBirth": "Jotunheim, Asgard",
+        "firstAppearance": "Journey into Mystery #85",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Frost Giant",
+        "height": [
+          "6'4",
+          "193 cm"
+        ],
+        "weight": [
+          "525 lb",
+          "236 kg"
+        ]
+      },
+      "work": {
+        "occupation": "God of Evil",
+        "base": "Asgard"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "Laufey (father), Thor (adoptive brother), Odin (adoptive father)"
+      },
+      "image": {
+        "url": "https://robohash.org/Loki.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1012",
+      "name": "Harley Quinn",
+      "slug": "harley-quinn",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "14",
+        "speed": "42",
+        "durability": "42",
+        "power": "39",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Harleen Quinzel",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Dr. Harleen Frances Quinzel"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Batman: The Animated Series",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'7",
+          "170 cm"
+        ],
+        "weight": [
+          "140 lb",
+          "63 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Former Psychiatrist",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Suicide Squad",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Harley+Quinn.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1013",
+      "name": "Flash",
+      "slug": "flash",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "10",
+        "speed": "100",
+        "durability": "60",
+        "power": "68",
+        "combat": "32"
+      },
+      "biography": {
+        "fullName": "Barry Allen",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Scarlet Speedster",
+          "Crimson Comet"
+        ],
+        "placeOfBirth": "Central City",
+        "firstAppearance": "Showcase #4",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'0",
+          "183 cm"
+        ],
+        "weight": [
+          "195 lb",
+          "88 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Forensic Scientist",
+        "base": "Central City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League, Flash Family",
+        "relatives": "Iris West (wife)"
+      },
+      "image": {
+        "url": "https://robohash.org/Flash.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1014",
+      "name": "Doctor Strange",
+      "slug": "doctor-strange",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "10",
+        "speed": "12",
+        "durability": "84",
+        "power": "100",
+        "combat": "60"
+      },
+      "biography": {
+        "fullName": "Stephen Vincent Strange",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Master of the Mystic Arts",
+          "Sorcerer Supreme"
+        ],
+        "placeOfBirth": "Philadelphia, Pennsylvania",
+        "firstAppearance": "Strange Tales #110",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "180 lb",
+          "81 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Sorcerer",
+        "base": "Sanctum Sanctorum, New York"
+      },
+      "connections": {
+        "groupAffiliation": "Defenders, Avengers",
+        "relatives": "Eugene Strange (father, deceased), Beverly Strange (mother, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Doctor+Strange.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1015",
+      "name": "Black Panther",
+      "slug": "black-panther",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "16",
+        "speed": "30",
+        "durability": "60",
+        "power": "41",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "T'Challa",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "King of Wakanda",
+          "King of the Dead"
+        ],
+        "placeOfBirth": "Wakanda",
+        "firstAppearance": "Fantastic Four #52",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'0",
+          "183 cm"
+        ],
+        "weight": [
+          "200 lb",
+          "90 kg"
+        ]
+      },
+      "work": {
+        "occupation": "King, Scientist",
+        "base": "Wakanda"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "T'Chaka (father, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Black+Panther.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1016",
+      "name": "Deadpool",
+      "slug": "deadpool",
+      "powerstats": {
+        "intelligence": "69",
+        "strength": "32",
+        "speed": "50",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Wade Wilson",
+        "alterEgos": "Evil Deadpool, Venompool",
+        "aliases": [
+          "Merc with a Mouth",
+          "Wade Winston Wilson"
+        ],
+        "placeOfBirth": "Canada",
+        "firstAppearance": "The New Mutants #98",
+        "publisher": "Marvel Comics",
+        "alignment": "neutral"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "210 lb",
+          "95 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Mercenary",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "X-Force",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Deadpool.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1017",
+      "name": "Wolverine",
+      "slug": "wolverine",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "32",
+        "speed": "50",
+        "durability": "100",
+        "power": "89",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Logan",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Weapon X",
+          "James Howlett"
+        ],
+        "placeOfBirth": "Alberta, Canada",
+        "firstAppearance": "Incredible Hulk #180",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": [
+          "5'3",
+          "160 cm"
+        ],
+        "weight": [
+          "300 lb",
+          "135 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "X-Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "X-Men, Avengers",
+        "relatives": "None known"
+      },
+      "image": {
+        "url": "https://robohash.org/Wolverine.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1018",
+      "name": "Lex Luthor",
+      "slug": "lex-luthor",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "53",
+        "speed": "25",
+        "durability": "65",
+        "power": "68",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Lex Luthor",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Alexander Joseph Luthor"
+        ],
+        "placeOfBirth": "Metropolis",
+        "firstAppearance": "Action Comics #23",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "210 lb",
+          "95 kg"
+        ]
+      },
+      "work": {
+        "occupation": "CEO of LexCorp",
+        "base": "Metropolis"
+      },
+      "connections": {
+        "groupAffiliation": "Injustice League",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Lex+Luthor.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1019",
+      "name": "Bane",
+      "slug": "bane",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "100",
+        "speed": "17",
+        "durability": "80",
+        "power": "58",
+        "combat": "95"
+      },
+      "biography": {
+        "fullName": "Unknown",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "None"
+        ],
+        "placeOfBirth": "Pena Duro, Santa Prisca",
+        "firstAppearance": "Batman: Vengeance of Bane #1",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'8",
+          "203 cm"
+        ],
+        "weight": [
+          "350 lb",
+          "158 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Mercenary",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Secret Society of Super Villains",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Bane.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1020",
+      "name": "Aquaman",
+      "slug": "aquaman",
+      "powerstats": {
+        "intelligence": "81",
+        "strength": "85",
+        "speed": "79",
+        "durability": "80",
+        "power": "100",
+        "combat": "80"
+      },
+      "biography": {
+        "fullName": "Arthur Curry",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Orin",
+          "King of Atlantis"
+        ],
+        "placeOfBirth": "Atlantis",
+        "firstAppearance": "More Fun Comics #73",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Atlantean",
+        "height": [
+          "6'1",
+          "185 cm"
+        ],
+        "weight": [
+          "325 lb",
+          "146 kg"
+        ]
+      },
+      "work": {
+        "occupation": "King of Atlantis",
+        "base": "Atlantis"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Aquaman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1021",
+      "name": "Green Arrow",
+      "slug": "green-arrow",
+      "powerstats": {
+        "intelligence": "69",
+        "strength": "11",
+        "speed": "30",
+        "durability": "28",
+        "power": "36",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Oliver Queen",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Green Arrow",
+          "Arrow"
+        ],
+        "placeOfBirth": "Star City",
+        "firstAppearance": "More Fun Comics #73",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "5'11",
+          "180 cm"
+        ],
+        "weight": [
+          "185 lb",
+          "83 kg"
+        ]
+      },
+      "work": {
+        "occupation": "CEO of Queen Industries",
+        "base": "Star City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Green+Arrow.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1022",
+      "name": "Scarlet Witch",
+      "slug": "scarlet-witch",
+      "powerstats": {
+        "intelligence": "50",
+        "strength": "10",
+        "speed": "29",
+        "durability": "70",
+        "power": "100",
+        "combat": "56"
+      },
+      "biography": {
+        "fullName": "Wanda Maximoff",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Wanda Frank"
+        ],
+        "placeOfBirth": "Wundagore Mountain, Transia",
+        "firstAppearance": "Uncanny X-Men #4",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'7",
+          "170 cm"
+        ],
+        "weight": [
+          "132 lb",
+          "59 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Avengers Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "Magneto (father)"
+      },
+      "image": {
+        "url": "https://robohash.org/Scarlet+Witch.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1023",
+      "name": "Vision",
+      "slug": "vision",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "72",
+        "speed": "54",
+        "durability": "95",
+        "power": "100",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Vision",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "None"
+        ],
+        "placeOfBirth": "Unknown",
+        "firstAppearance": "Avengers #57",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Android",
+        "height": [
+          "6'3",
+          "191 cm"
+        ],
+        "weight": [
+          "300 lb",
+          "135 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Avengers Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "Ultron (creator)"
+      },
+      "image": {
+        "url": "https://robohash.org/Vision.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1024",
+      "name": "Hawkeye",
+      "slug": "hawkeye",
+      "powerstats": {
+        "intelligence": "50",
+        "strength": "12",
+        "speed": "23",
+        "durability": "14",
+        "power": "32",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Clint Barton",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Hawkeye",
+          "Ronin"
+        ],
+        "placeOfBirth": "Waverly, Iowa",
+        "firstAppearance": "Tales of Suspense #57",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'3",
+          "191 cm"
+        ],
+        "weight": [
+          "230 lb",
+          "103 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Avengers Tower"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Hawkeye.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1025",
+      "name": "Ant-Man",
+      "slug": "ant-man",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "18",
+        "speed": "17",
+        "durability": "40",
+        "power": "53",
+        "combat": "32"
+      },
+      "biography": {
+        "fullName": "Scott Lang",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Ant-Man"
+        ],
+        "placeOfBirth": "Coral Gables, Florida",
+        "firstAppearance": "Avengers #181",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'0",
+          "183 cm"
+        ],
+        "weight": [
+          "190 lb",
+          "86 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Electronics Technician",
+        "base": "San Francisco"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "Cassie Lang (daughter)"
+      },
+      "image": {
+        "url": "https://robohash.org/Ant-Man.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1026",
+      "name": "Green Goblin",
+      "slug": "green-goblin",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "48",
+        "speed": "38",
+        "durability": "60",
+        "power": "53",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Norman Osborn",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Goblin King"
+        ],
+        "placeOfBirth": "New York",
+        "firstAppearance": "Amazing Spider-Man #14",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "5'11",
+          "180 cm"
+        ],
+        "weight": [
+          "185 lb",
+          "83 kg"
+        ]
+      },
+      "work": {
+        "occupation": "CEO of Oscorp",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "Harry Osborn (son)"
+      },
+      "image": {
+        "url": "https://robohash.org/Green+Goblin.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1027",
+      "name": "Venom",
+      "slug": "venom",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "57",
+        "speed": "65",
+        "durability": "84",
+        "power": "86",
+        "combat": "84"
+      },
+      "biography": {
+        "fullName": "Eddie Brock",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Venom"
+        ],
+        "placeOfBirth": "New York",
+        "firstAppearance": "Amazing Spider-Man #300",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Symbiote",
+        "height": [
+          "6'3",
+          "191 cm"
+        ],
+        "weight": [
+          "260 lb",
+          "117 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Vigilante",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Venom.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1028",
+      "name": "Magneto",
+      "slug": "magneto",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "12",
+        "speed": "23",
+        "durability": "88",
+        "power": "100",
+        "combat": "64"
+      },
+      "biography": {
+        "fullName": "Erik Lehnsherr",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Master of Magnetism"
+        ],
+        "placeOfBirth": "Germany",
+        "firstAppearance": "X-Men #1",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "190 lb",
+          "86 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Terrorist",
+        "base": "Unknown"
+      },
+      "connections": {
+        "groupAffiliation": "Brotherhood of Evil Mutants",
+        "relatives": "Scarlet Witch (daughter), Quicksilver (son)"
+      },
+      "image": {
+        "url": "https://robohash.org/Magneto.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1029",
+      "name": "Doctor Doom",
+      "slug": "doctor-doom",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "38",
+        "speed": "20",
+        "durability": "85",
+        "power": "100",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Victor Von Doom",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Doctor Doom"
+        ],
+        "placeOfBirth": "Latveria",
+        "firstAppearance": "Fantastic Four #5",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "225 lb",
+          "101 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Monarch of Latveria",
+        "base": "Latveria"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Doctor+Doom.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1030",
+      "name": "Red Skull",
+      "slug": "red-skull",
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "11",
+        "speed": "23",
+        "durability": "14",
+        "power": "38",
+        "combat": "84"
+      },
+      "biography": {
+        "fullName": "Johann Schmidt",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Red Skull"
+        ],
+        "placeOfBirth": "Germany",
+        "firstAppearance": "Captain America Comics #1",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'1",
+          "185 cm"
+        ],
+        "weight": [
+          "195 lb",
+          "88 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Terrorist",
+        "base": "Unknown"
+      },
+      "connections": {
+        "groupAffiliation": "Hydra",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Red+Skull.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1031",
+      "name": "Daredevil",
+      "slug": "daredevil",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "13",
+        "speed": "25",
+        "durability": "35",
+        "power": "61",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Matt Murdock",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Daredevil",
+          "Man Without Fear"
+        ],
+        "placeOfBirth": "New York",
+        "firstAppearance": "Daredevil #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'0",
+          "183 cm"
+        ],
+        "weight": [
+          "200 lb",
+          "90 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Lawyer",
+        "base": "Hell's Kitchen, New York"
+      },
+      "connections": {
+        "groupAffiliation": "Defenders",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Daredevil.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1032",
+      "name": "Punisher",
+      "slug": "punisher",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "16",
+        "speed": "23",
+        "durability": "35",
+        "power": "36",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Frank Castle",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "The Punisher"
+        ],
+        "placeOfBirth": "New York",
+        "firstAppearance": "Amazing Spider-Man #129",
+        "publisher": "Marvel Comics",
+        "alignment": "neutral"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'1",
+          "185 cm"
+        ],
+        "weight": [
+          "200 lb",
+          "90 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Vigilante",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "Maria Castle (wife, deceased)"
+      },
+      "image": {
+        "url": "https://robohash.org/Punisher.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1033",
+      "name": "Ghost Rider",
+      "slug": "ghost-rider",
+      "powerstats": {
+        "intelligence": "50",
+        "strength": "80",
+        "speed": "25",
+        "durability": "100",
+        "power": "100",
+        "combat": "50"
+      },
+      "biography": {
+        "fullName": "Johnny Blaze",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Ghost Rider",
+          "Spirit of Vengeance"
+        ],
+        "placeOfBirth": "Waukegan, Illinois",
+        "firstAppearance": "Marvel Spotlight #5",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Demon",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "220 lb",
+          "99 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Stunt Motorcyclist",
+        "base": "Mobile"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Ghost+Rider.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1034",
+      "name": "Catwoman",
+      "slug": "catwoman",
+      "powerstats": {
+        "intelligence": "69",
+        "strength": "11",
+        "speed": "33",
+        "durability": "28",
+        "power": "27",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Selina Kyle",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Catwoman",
+          "The Cat"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Batman #1",
+        "publisher": "DC Comics",
+        "alignment": "neutral"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'7",
+          "170 cm"
+        ],
+        "weight": [
+          "133 lb",
+          "60 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Thief",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Catwoman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1035",
+      "name": "Riddler",
+      "slug": "riddler",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "10",
+        "speed": "12",
+        "durability": "14",
+        "power": "16",
+        "combat": "45"
+      },
+      "biography": {
+        "fullName": "Edward Nigma",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Riddler",
+          "Edward Nashton"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Detective Comics #140",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "6'1",
+          "185 cm"
+        ],
+        "weight": [
+          "183 lb",
+          "82 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Professional Criminal",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "None",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Riddler.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1036",
+      "name": "Nightwing",
+      "slug": "nightwing",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "11",
+        "speed": "33",
+        "durability": "28",
+        "power": "36",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Dick Grayson",
+        "alterEgos": "Robin",
+        "aliases": [
+          "Robin",
+          "Nightwing"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Detective Comics #38",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "5'10",
+          "178 cm"
+        ],
+        "weight": [
+          "175 lb",
+          "79 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Vigilante",
+        "base": "Bludhaven"
+      },
+      "connections": {
+        "groupAffiliation": "Batman Family, Teen Titans",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Nightwing.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1037",
+      "name": "Supergirl",
+      "slug": "supergirl",
+      "powerstats": {
+        "intelligence": "94",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "85"
+      },
+      "biography": {
+        "fullName": "Kara Zor-El",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Supergirl",
+          "Kara Danvers"
+        ],
+        "placeOfBirth": "Krypton",
+        "firstAppearance": "Action Comics #252",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Kryptonian",
+        "height": [
+          "5'6",
+          "168 cm"
+        ],
+        "weight": [
+          "135 lb",
+          "61 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Reporter",
+        "base": "National City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League",
+        "relatives": "Superman (cousin)"
+      },
+      "image": {
+        "url": "https://robohash.org/Supergirl.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1038",
+      "name": "Cyborg",
+      "slug": "cyborg",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "72",
+        "speed": "42",
+        "durability": "85",
+        "power": "80",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Victor Stone",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Cyborg"
+        ],
+        "placeOfBirth": "New York",
+        "firstAppearance": "DC Comics Presents #26",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Cyborg",
+        "height": [
+          "6'6",
+          "198 cm"
+        ],
+        "weight": [
+          "385 lb",
+          "173 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Justice League Watchtower"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League, Teen Titans",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Cyborg.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1039",
+      "name": "Shazam",
+      "slug": "shazam",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "60"
+      },
+      "biography": {
+        "fullName": "Billy Batson",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Shazam",
+          "Captain Marvel"
+        ],
+        "placeOfBirth": "Fawcett City",
+        "firstAppearance": "Whiz Comics #2",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human / God",
+        "height": [
+          "6'2",
+          "188 cm"
+        ],
+        "weight": [
+          "210 lb",
+          "95 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Fawcett City"
+      },
+      "connections": {
+        "groupAffiliation": "Justice League",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Shazam.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1040",
+      "name": "Storm",
+      "slug": "storm",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "10",
+        "speed": "47",
+        "durability": "60",
+        "power": "88",
+        "combat": "75"
+      },
+      "biography": {
+        "fullName": "Ororo Munroe",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Storm",
+          "Goddess"
+        ],
+        "placeOfBirth": "Cairo, Egypt",
+        "firstAppearance": "Giant-Size X-Men #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Mutant",
+        "height": [
+          "5'11",
+          "180 cm"
+        ],
+        "weight": [
+          "145 lb",
+          "65 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "X-Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "X-Men",
+        "relatives": "Black Panther (ex-husband)"
+      },
+      "image": {
+        "url": "https://robohash.org/Storm.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1041",
+      "name": "Rogue",
+      "slug": "rogue",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "100",
+        "speed": "70",
+        "durability": "100",
+        "power": "100",
+        "combat": "80"
+      },
+      "biography": {
+        "fullName": "Anna Marie",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Rogue"
+        ],
+        "placeOfBirth": "Caldecott County, Mississippi",
+        "firstAppearance": "Avengers Annual #10",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Mutant",
+        "height": [
+          "5'8",
+          "173 cm"
+        ],
+        "weight": [
+          "120 lb",
+          "54 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "X-Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "X-Men",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Rogue.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1042",
+      "name": "Jean Grey",
+      "slug": "jean-grey",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "59",
+        "speed": "53",
+        "durability": "52",
+        "power": "100",
+        "combat": "56"
+      },
+      "biography": {
+        "fullName": "Jean Grey",
+        "alterEgos": "Phoenix",
+        "aliases": [
+          "Marvel Girl",
+          "Phoenix"
+        ],
+        "placeOfBirth": "Annandale-on-Hudson, New York",
+        "firstAppearance": "X-Men #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Mutant",
+        "height": [
+          "5'6",
+          "168 cm"
+        ],
+        "weight": [
+          "115 lb",
+          "52 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "X-Mansion"
+      },
+      "connections": {
+        "groupAffiliation": "X-Men",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Jean+Grey.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1043",
+      "name": "Invisible Woman",
+      "slug": "invisible-woman",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "10",
+        "speed": "27",
+        "durability": "85",
+        "power": "93",
+        "combat": "56"
+      },
+      "biography": {
+        "fullName": "Susan Storm",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Invisible Woman",
+          "Invisible Girl"
+        ],
+        "placeOfBirth": "Glenville, Long Island",
+        "firstAppearance": "Fantastic Four #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human / Radiation",
+        "height": [
+          "5'6",
+          "168 cm"
+        ],
+        "weight": [
+          "120 lb",
+          "54 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Adventurer",
+        "base": "Baxter Building"
+      },
+      "connections": {
+        "groupAffiliation": "Fantastic Four",
+        "relatives": "Mr. Fantastic (husband)"
+      },
+      "image": {
+        "url": "https://robohash.org/Invisible+Woman.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1044",
+      "name": "She-Hulk",
+      "slug": "she-hulk",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "100",
+        "speed": "35",
+        "durability": "100",
+        "power": "62",
+        "combat": "70"
+      },
+      "biography": {
+        "fullName": "Jennifer Walters",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "She-Hulk"
+        ],
+        "placeOfBirth": "Los Angeles, California",
+        "firstAppearance": "Savage She-Hulk #1",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human / Radiation",
+        "height": [
+          "6'7",
+          "200 cm"
+        ],
+        "weight": [
+          "650 lb",
+          "292 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Lawyer",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers, Fantastic Four",
+        "relatives": "Hulk (cousin)"
+      },
+      "image": {
+        "url": "https://robohash.org/She-Hulk.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1045",
+      "name": "Mystique",
+      "slug": "mystique",
+      "powerstats": {
+        "intelligence": "75",
+        "strength": "12",
+        "speed": "23",
+        "durability": "60",
+        "power": "68",
+        "combat": "80"
+      },
+      "biography": {
+        "fullName": "Raven Darkholme",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Mystique"
+        ],
+        "placeOfBirth": "Unknown",
+        "firstAppearance": "Ms. Marvel #16",
+        "publisher": "Marvel Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Mutant",
+        "height": [
+          "5'10",
+          "178 cm"
+        ],
+        "weight": [
+          "120 lb",
+          "54 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Terrorist",
+        "base": "Mobile"
+      },
+      "connections": {
+        "groupAffiliation": "Brotherhood of Evil Mutants",
+        "relatives": "Nightcrawler (son)"
+      },
+      "image": {
+        "url": "https://robohash.org/Mystique.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1046",
+      "name": "Batgirl",
+      "slug": "batgirl",
+      "powerstats": {
+        "intelligence": "88",
+        "strength": "11",
+        "speed": "33",
+        "durability": "28",
+        "power": "36",
+        "combat": "95"
+      },
+      "biography": {
+        "fullName": "Barbara Gordon",
+        "alterEgos": "Oracle",
+        "aliases": [
+          "Batgirl",
+          "Oracle"
+        ],
+        "placeOfBirth": "Gotham City",
+        "firstAppearance": "Detective Comics #359",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'7",
+          "170 cm"
+        ],
+        "weight": [
+          "126 lb",
+          "57 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Vigilante, Librarian",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Batman Family",
+        "relatives": "James Gordon (father)"
+      },
+      "image": {
+        "url": "https://robohash.org/Batgirl.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1047",
+      "name": "Poison Ivy",
+      "slug": "poison-ivy",
+      "powerstats": {
+        "intelligence": "81",
+        "strength": "12",
+        "speed": "21",
+        "durability": "28",
+        "power": "71",
+        "combat": "40"
+      },
+      "biography": {
+        "fullName": "Pamela Isley",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Poison Ivy"
+        ],
+        "placeOfBirth": "Seattle, Washington",
+        "firstAppearance": "Batman #181",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'6",
+          "168 cm"
+        ],
+        "weight": [
+          "115 lb",
+          "52 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Eco-terrorist",
+        "base": "Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Injustice League",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Poison+Ivy.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1048",
+      "name": "Elektra",
+      "slug": "elektra",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "11",
+        "speed": "25",
+        "durability": "28",
+        "power": "58",
+        "combat": "100"
+      },
+      "biography": {
+        "fullName": "Elektra Natchios",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Elektra"
+        ],
+        "placeOfBirth": "Greece",
+        "firstAppearance": "Daredevil #168",
+        "publisher": "Marvel Comics",
+        "alignment": "neutral"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": [
+          "5'9",
+          "175 cm"
+        ],
+        "weight": [
+          "130 lb",
+          "58 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Assassin",
+        "base": "New York"
+      },
+      "connections": {
+        "groupAffiliation": "The Hand",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Elektra.png?set=set2&size=400x400"
+      }
+    },
+    {
+      "id": "1049",
+      "name": "Captain Marvel",
+      "slug": "captain-marvel",
+      "powerstats": {
+        "intelligence": "63",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "84"
+      },
+      "biography": {
+        "fullName": "Carol Danvers",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Captain Marvel",
+          "Ms. Marvel"
+        ],
+        "placeOfBirth": "Boston, Massachusetts",
+        "firstAppearance": "Marvel Super-Heroes #13",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human / Kree",
+        "height": [
+          "5'11",
+          "180 cm"
+        ],
+        "weight": [
+          "165 lb",
+          "74 kg"
+        ]
+      },
+      "work": {
+        "occupation": "Pilot, Adventurer",
+        "base": "Mobile"
+      },
+      "connections": {
+        "groupAffiliation": "Avengers",
+        "relatives": "None"
+      },
+      "image": {
+        "url": "https://robohash.org/Captain+Marvel.png?set=set2&size=400x400"
+      }
+    }
+  ],
+  "metadata": {
+    "totalCount": 50,
+    "seededAt": "2025-10-26T11:30:00Z",
+    "source": "mock-data-for-workshop"
+  }
+}
