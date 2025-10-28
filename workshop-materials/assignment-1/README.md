@@ -1,4 +1,4 @@
-# Assignment 1: AI-generated test from HAR file
+# Assignment 1: Test Generation
 
 ## Prerequisites
 

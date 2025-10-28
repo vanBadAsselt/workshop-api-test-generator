@@ -1,0 +1,5 @@
+import { prd } from './testdata.prd';
+
+export const testData = {
+  prd,
+};

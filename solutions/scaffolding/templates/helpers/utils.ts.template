@@ -1,0 +1,15 @@
+// Utility functions for {{name}} API tests
+import { TestData, TestScenario } from './types';
+
+export function getScenarioData(
+  testData: TestData,
+  scenarioName: string
+): TestScenario | undefined {
+  return testData.scenarios.find(
+    (scenario) => scenario.name === scenarioName
+  );
+}
+
+export function randomItem<T>(items: T[]): T {
+  return items[Math.floor(Math.random() * items.length)];
+}

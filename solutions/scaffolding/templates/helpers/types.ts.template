@@ -1,0 +1,11 @@
+// Type definitions for {{name}} API tests
+
+export interface TestScenario {
+  name: string;
+  description?: string;
+}
+
+export interface TestData {
+  baseUrl?: string;
+  scenarios: TestScenario[];
+}

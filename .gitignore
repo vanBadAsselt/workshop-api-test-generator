@@ -34,3 +34,9 @@ coverage/
 *-capture.json
 *-capture.har
 
+# Scaffolding test output
+api-tests/
+
+# Other
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md

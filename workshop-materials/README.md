@@ -1,85 +1,197 @@
-# API Test Automation Workshop
+# Workshop: AI-Assisted API Test Generation
 
-Welcome to the API Test Automation Workshop! This hands-on workshop will teach you how to test APIs using real-world scenarios with the **Superpowers** demo application.
+**Duration:** 90 minutes  
+**Level:** Intermediate  
+**Focus:** Concepts that apply to any API testing tool
 
-## Workshop Overview
+---
 
-In this workshop, you'll learn:
-- How to analyze API traffic using browser DevTools and HAR files
-- GraphQL API testing fundamentals
-- REST API testing best practices
-- How to write automated API tests
-- Contract testing concepts
-- Performance and load testing basics
+## Workshop Structure
 
-## Prerequisites
+### Introduction (15 min)
+**"What if you could steal tests straight from the browser?"**
 
-**📋 Before the workshop:** Please complete setup using one of these guides:
-- **Detailed Setup:** [PREREQUISITES.md](PREREQUISITES.md) - Full instructions for all platforms
-- **Quick Start:** [QUICK-START.md](QUICK-START.md) - For experienced developers
+Learn about:
+- The challenge: Fast feature development + limited testing capacity
+- How HAR files capture real API traffic
+- Why GraphQL makes testing easier
+- The architecture we'll build
 
-**Minimum requirements:**
-- Node.js 18+
-- k6 (load testing tool)
-- Modern browser with DevTools
-- AI assistant access (ChatGPT/Claude)
+### Assignment 1: Test Generation (20 min)
+**The naive approach: Give AI everything**
 
-**Knowledge prerequisites:**
-- Basic understanding of APIs (REST/GraphQL)
-- Familiarity with JavaScript/TypeScript
+- Capture a HAR file from your browser
+- Send it to ChatGPT/Claude
+- Generate a k6 test
+- Run it
 
-## Getting Started
+**Key Learning:** This works... but doesn't scale.
+- ~500,000 tokens per test
+- Privacy concerns
+- Inconsistent results
+- Expensive at scale
 
-### On Workshop Day
+### Assignment 2: Smart Extraction (30 min)
+**Be smart about what you send to AI**
 
-If you completed pre-workshop setup, just run:
+- Extract specific operations from HAR files
+- Use scripts for deterministic parsing
+- Let AI focus on creative test logic
+- Reuse extraction scripts
 
-```bash
-cd superpowers
-npm run dev
+**Key Learning:** Separation of concerns
+- Scripts handle parsing (deterministic)
+- AI handles logic (creative)
+- ~500 tokens vs 500,000
+- Privacy-safe, fast, consistent
+
+### Assignment 3: Structuring & Architecture (20 min)
+**Build a maintainable test system**
+
+- Scaffold a six-layer architecture
+- Understand modular test structure
+- Fill structure with AI-generated logic
+- Enable reusability at scale
+
+**Key Learning:** Structure enables scale
+- Queries reused across tests
+- Environment-specific data
+- Test type flexibility (smoke, load, stress)
+- One change updates all tests
+
+### Wrap-Up (5 min)
+**What you learned**
+
+- 🎯 Be intentional about test goals
+- 🔧 Script the deterministic parts
+- 🤖 Use AI for creative logic
+- 🏗️ Structure for maintainability
+- 💰 Smart extraction saves money
+
+---
+
+## Six-Layer Architecture
+
+```
+┌─────────────────────────────────────────┐
+│  1. MAIN - Entry Point                  │  Load data, run scenarios
+├─────────────────────────────────────────┤
+│  2. STEPS - Isolated API Calls          │  Execute + Assert
+├─────────────────────────────────────────┤
+│  3. QUERIES - GraphQL Definitions       │  Reusable queries
+├─────────────────────────────────────────┤
+│  4. TESTDATA - Variables & Inputs       │  Environment-specific
+├─────────────────────────────────────────┤
+│  5. CONFIG - Test Settings              │  Performance params
+├─────────────────────────────────────────┤
+│  6. HELPERS - Utilities & Types         │  Shared code
+└─────────────────────────────────────────┘
 ```
 
-**Verify it's working:**
-- Frontend: http://localhost:3000 ✅
-- Backend: http://localhost:4000/graphql ✅
+**Benefits:**
+- ✅ Reusability - One query, many tests
+- ✅ Maintainability - Change once, update all
+- ✅ Flexibility - Swap env/config easily
+- ✅ Scalability - Structure grows with you
 
-## API Documentation
+---
 
-### GraphQL Endpoint: `http://localhost:4000/graphql`
+## Files & Resources
 
-**Available Queries:**
-- `searchCharacters` - Search and filter characters
-- `getCharacter` - Get detailed character info
-- `getCharactersByAlignment` - Filter by good/bad/neutral
-- `getRandomCharacter` - Get a random character
+### Getting Started
+- [PREREQUISITES.md](PREREQUISITES.md) - Setup before workshop
+- [QUICK-START.md](QUICK-START.md) - Quick reference
+- [WORKSHOP-INTRO.md](WORKSHOP-INTRO.md) - Full instructor script
+- [WORKSHOP-TIMELINE.md](WORKSHOP-TIMELINE.md) - Detailed schedule
 
-### REST Endpoints: `http://localhost:4001/api`
+### Assignments
+- [assignment-1/](assignment-1/) - Test Generation (20 min)
+- [assignment-2/](assignment-2/) - Smart Extraction (30 min)
+- [assignment-3/](assignment-3/) - Structuring & Architecture (20 min)
 
-- `POST /api/compare` - Compare two characters
-- `GET /api/characters/:id/stats` - Get character stats
-- `GET /api/random` - Get random character
+### Demo App
+- [../superpowers/](../superpowers/) - Superhero comparison app
 
-## Tips for Success
+---
 
-1. Use the GraphQL Playground at http://localhost:4000/graphql to explore queries
-2. Keep browser DevTools Network tab open to inspect traffic
-3. Export HAR files to analyze request/response patterns
-4. Read error messages carefully - they often contain helpful hints
-5. Ask questions! Your instructors are here to help
+## Key Takeaways
 
-## Resources
+### When to Use What
 
-- [GraphQL Documentation](https://graphql.org/learn/)
-- [REST API Best Practices](https://restfulapi.net/)
-- [HAR File Specification](http://www.softwareishard.com/blog/har-12-spec/)
-- [Jest Testing Framework](https://jestjs.io/)
+| Task | Tool | Why |
+|------|------|-----|
+| **Parsing HAR files** | Script | Deterministic, fast, private |
+| **Extracting operations** | Script | Consistent, reusable |
+| **Creating structure** | Script/Generator | Consistent architecture |
+| **Writing assertions** | AI | Creative, context-aware |
+| **Generating test logic** | AI | Understands intent |
+| **Edge case handling** | AI | Thinks like a tester |
 
-## Support
+### Cost Comparison
 
-If you encounter any issues:
-1. Check that both backend and frontend are running
-2. Verify you're using the correct ports
-3. Clear browser cache and reload
-4. Ask your workshop instructor
+| Approach | Tokens | Privacy | Speed | Consistency |
+|----------|--------|---------|-------|-------------|
+| Full HAR to AI | ~500,000 | ⚠️ Low | 🐌 Slow | ⚠️ Variable |
+| Extracted call | ~500 | ✅ High | ⚡ Fast | ✅ Predictable |
 
-Happy Testing!
+### Real-World Application
+
+**Start with:**
+1. Capture real user flows (HAR files)
+2. Extract the operations you care about
+3. Scaffold your test structure
+4. Use AI to fill in the details
+
+**Scale up:**
+1. Reuse queries across tests
+2. Environment-specific test data
+3. Multiple test types (smoke, load, stress)
+4. Shared utilities and helpers
+
+---
+
+## After the Workshop
+
+**Try this Monday:**
+1. Capture a HAR file from your own app
+2. Extract one operation
+3. Generate a test with AI
+4. Run it!
+
+**Questions to consider:**
+- Which of your tests could be extracted from HAR files?
+- Where can scripts replace manual work?
+- What structure would help your team scale?
+- How much time could smart extraction save?
+
+---
+
+## Tools Used
+
+- **k6** - Load testing tool (concepts apply to any tool)
+- **GraphQL** - Query language (works with REST too)
+- **HAR files** - Standard format for browser traffic
+- **ChatGPT/Claude** - AI assistants for test generation
+- **TypeScript** - For extraction scripts
+
+**Remember:** The concepts apply regardless of your tools!
+
+---
+
+## Credits
+
+Workshop created by Anaïs van Asselt  
+Company: Choco  
+Focus: Making API testing faster and more maintainable through smart automation
+
+---
+
+## Contributing
+
+Found an issue or have a suggestion? The workshop materials are designed to be adapted to your context.
+
+**Ideas for customization:**
+- Swap Superpowers app with your own API
+- Add REST API examples alongside GraphQL
+- Include additional test types (integration, contract)
+- Extend architecture with more layers
