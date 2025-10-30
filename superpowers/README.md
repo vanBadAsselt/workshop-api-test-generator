@@ -29,8 +29,6 @@ A lightweight superhero power comparison application built for API test automati
 ```bash
 # Install all dependencies
 npm install
-
-# Start both backend and frontend
 npm run dev
 ```
 
@@ -83,42 +81,6 @@ GET /api/characters/:id/stats
 
 # Get random character
 GET /api/random
-```
-
-## Workshop Usage
-
-### Generating HAR Files
-
-1. Open the app in Chrome/Firefox
-2. Open Developer Tools (Network tab)
-3. Interact with the app (search, filter, view details, compare)
-4. Right-click network logs → "Save all as HAR with content"
-5. Use the HAR file for test generation exercises
-
-### Example User Flow for HAR Generation
-
-1. Load character list → `SearchCharacters` query
-2. Search "bat" → `SearchCharacters` with variables
-3. Click Batman → `GetCharacter` query
-4. Select Batman + Joker → `POST /api/compare`
-5. Click random → `GET /api/random`
-
-**Result**: HAR file with ~5 API calls demonstrating various patterns
-
-## Development Scripts
-
-```bash
-# Install dependencies
-npm install
-
-# Run development servers
-npm run dev
-
-# Build for production
-npm run build
-
-# Lint code
-npm run lint
 ```
 
 ## Data Management

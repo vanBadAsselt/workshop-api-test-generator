@@ -49,7 +49,7 @@ In this assignment, you'll capture real user interactions and let AI generate a 
 
 ```
 You are an expert test automation engineer. Attached is a HAR file from a web application called “Superpowers”, where users can compare the powers of heroes and villains.
-Generate a K6 test script based on the GetCharacters API call you can find in this HAR file.
+Generate a K6 test script based on the GetCharacter API call you can find in this HAR file.
 ```
 
 4. **Save the generated script** as `generated-test.js` in this folder
