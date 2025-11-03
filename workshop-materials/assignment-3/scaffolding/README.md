@@ -5,7 +5,7 @@ A simple template-based generator for creating structured API test sets.
 ## Usage
 
 ```bash
-cd solutions/scaffolding
+cd assignment-3/scaffolding
 npx tsx generate.ts <testName>
 ```
 
@@ -40,7 +40,6 @@ api-tests/superpowers/
 
 Templates support these variables:
 - `{{name}}` - Test name in lowercase (e.g., `superpowers`)
-- `{{Name}}` - Test name capitalized (e.g., `Superpowers`)
 
 ## Generated Structure
 

@@ -43,7 +43,7 @@ In this assignment, you'll capture real user interactions and let AI generate a 
 
 ## Step 2: Generate test with AI
 
-1. **Open ChatGPT or Claude**
+1. **Open ChatGPT or Perplexity AI**
 2. **Upload your HAR file**
 3. **Use this prompt:**
 
@@ -54,7 +54,7 @@ Generate a K6 test script based on the GetCharacter API call you can find in thi
 
 4. **Save the generated script** as `generated-test.js` in this folder
 
-## Step 3: Run and tweak the test 
+## Step 3: Run the test 
 
 1. **Run your generated test with K6:**
 Make sure your terminal is opened at `cd workshop-materials/assignment-1`
@@ -84,9 +84,6 @@ more tokens is expensive
 Instability of huge prompts/hallucinations
 Privacy - any sensitive data that could be in the HAR? 
 Want to be more in control - filter out the call we want to test
-
-
-**Note:** If you couldn't complete the exercise due to technical issues, that's okay! The discussion is the most important part.
 
 ## Troubleshooting
 

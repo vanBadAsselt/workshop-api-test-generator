@@ -1,178 +1,121 @@
-# Assignment 3: Structuring & Architecture
+# Assignment 3: Modular Architecture
 
-## Briefing
+## Intro: The Six-Layer Architecture
 
-In Assignments 1 & 2, we generated standalone tests. But real projects need more than that.
+Now that we can extract real API calls, the question is: **How do we turn that into a reliable, reusable test system?**
 
-**The Question:** How do we turn extracted API calls into a **reliable, reusable test system**?
+In Assignments 1 & 2, we saw the problems with standalone tests:
+- Hardcoded URLs and data
+- No reusability across environments
+- Difficult to scale to 50+ endpoints
 
-**The Answer:** A modular six-layer architecture.
+The solution: **A modular six-layer architecture** that separates concerns and enables reusability.
 
-In this assignment, you'll scaffold this structure, then use AI to fill it with actual test logic.
+### The 6 Layers
 
-**Time:** ~20 minutes
+```
+api-tests/<testset>/
+├── 1️⃣ main.ts           Entry point - orchestrates the test
+├── 2️⃣ steps/            Isolated API calls with assertions  
+├── 3️⃣ queries/          GraphQL query definitions
+├── 4️⃣ testdata/         Environment-specific test data
+├── 5️⃣ config/           Performance configs & thresholds
+└── 6️⃣ helpers/          Utilities and type definitions
+```
 
 ---
 
-## Step 1: Scaffold Your Test Structure (2 min)
+## Assignment: Fill in the Architecture
 
-Run the scaffolding generator to create a structured test:
+### Step 1: Scaffold Your Test Structure
+
+Run the scaffolding generator:
 
 ```bash
-cd solutions/scaffolding
-npx tsx generate.ts <yourName>
+cd workshop-materials/assignment-3/scaffolding
+npx tsx generate.ts <testset>
 ```
 
 **Example:**
 ```bash
-npx tsx generate.ts anais
+npx tsx generate.ts superpowers
 ```
+This creates: `api-tests/superpowers/` with all 6 layers set up!
 
-### 🔍 Explore the Six-Layer Architecture
+### Step 2: Explore the Structure
 
-Open `api-tests/<yourName>/` and understand the layers:
+Open `api-tests/<superpowers>/` and look at each file. Notice:
+- ✅ **Structure is there** (folders, imports, placeholders)
+- ❓ **Logic is missing** (queries, steps, assertions)
 
-```
-api-tests/<yourName>/
-├── 1. main.ts                    # Entry point - loads data & runs scenarios
-├── 2. steps/                     # Isolated API calls with assertions (empty)
-├── 3. queries/                   # GraphQL query definitions (empty)
-├── 4. testdata/                  # Environment-specific variables
-│   ├── testdata.ts              # Index
-│   └── testdata.prd.ts          # Production data
-├── 5. config/                    # Test settings & thresholds
-│   └── options.smoke.json       # Smoke test config (1 VU, 1 iteration)
-└── 6. helpers/                   # Utilities and type definitions
-    ├── types.ts
-    └── utils.ts
-```
+**Question for discussion:**
 
-**Key Insight:** 
-- **Structure** is scaffolded (layers 1, 4-6)
-- **Logic** is missing (layers 2-3) ← This is where you add tests!
+Given the JSON from Assignment 2 (with URL, query, variables, response):
 
-**Why this structure?**
-- ✅ **Reusability** - Queries used across multiple tests
-- ✅ **Maintainability** - One change updates all tests
-- ✅ **Environment flexibility** - Swap data by setting `ENV=prd|tst`
-- ✅ **Test type flexibility** - Swap config by setting `TEST_TYPE=smoke|load`
+1. **Where does the URL go?**
+2. **Where does the query go?**
+3. **Where do the variables/test data go?**
+4. **Where do the assertions go?**
 
----
+Take 2 minutes with your table to map it out.
 
-## Step 2: Add Test Manually with AI (10 min)
+### Step 3: Add One Test
 
-Let's fill in the skeleton with a real test.
-
-### 2A: Generate a GraphQL Query File
+#### Create Query File
 
 **Ask AI:**
 ```
-Create a GraphQL queries file for the GetCharacter operation.
-Use this query from my captured JSON: [paste query from assignment-2 GetCharacter-capture.json]
+Create a TypeScript file that exports this GraphQL query:
+[paste query from GetCharacter-capture.json]
 
-Output should be:
-- TypeScript file exporting the query as a constant
-- File should go in queries/getCharacter.ts
+Export as: export const getCharacter = `...query...`;
 ```
 
-**Save output to:** `api-tests/<yourName>/queries/getCharacter.ts`
+**Save to:** `api-tests/superpowers/queries/getCharacter.ts`
 
-### 2B: Fill in the Main Test
+#### Update Main
 
 **Ask AI:**
 ```
-I have a k6 test skeleton at main.ts with this structure: [attach your main.ts]
-And GraphQL queries at queries/getCharacter.ts: [attach the file]
+Update main.ts [attach file] to use the query [attach queries/getCharacter.ts].
 
-Update main.ts to:
-1. Import the getCharacter query
-2. Make a POST request to the GraphQL endpoint
-3. Add meaningful checks for:
-   - Status is 200
-   - Response has data.getCharacter
-   - Character has required fields (id, name, totalPower)
-   - Character ID matches the requested ID
+Make a POST to the url with the query and add basic checks.
 ```
 
-**Update:** `api-tests/<yourName>/main.ts`
+**Update:** `api-tests/superpowers/main.ts`
 
-### 2C: Test It!
+#### Run It
 
 ```bash
-k6 run api-tests/<yourName>/main.ts
+k6 run api-tests/superpowers/main.ts
 ```
 
 **Does it work?** 🎯
 
 ---
 
-## Step 3: Automation (Bonus - 8 min)
+## Discussion
 
-**Challenge:** Can you create a script that automates Step 2?
+**Compare to Assignment 2:**
+- What's easier to change? (environment, test data, queries)
+- What's easier to reuse? (queries across tests)
+- What's easier to scale? (adding 50 endpoints)
 
-**Prompt for AI:**
-```
-Create a script that takes:
-- Input: A JSON file (from assignment-2 extraction)
-- Output: Fills in the scaffolded test structure
-
-The script should:
-1. Create queries/<operationName>.ts with the GraphQL query
-2. Update main.ts to use the query and add appropriate checks
-```
-
-**Time permitting:** Try to run your automation script!
-
----
-
-## Debriefing Questions
-
-### Structure vs. Logic
-
-| What | Manual/Script | AI |
-|------|---------------|-----|
-| **Folder structure** | ✅ Script | ❌ |
-| **GraphQL query files** | 🤔 ? | 🤔 ? |
-| **Test logic & checks** | 🤔 ? | 🤔 ? |
-
-### Discussion Points
-
-- 🎯 **When to scaffold vs. generate everything?**
-- 🏗️ **Benefits of structured tests?** (vs. single files)
-- 🤖 **What should AI generate?** (creative logic)
-- 🔧 **What should scripts do?** (deterministic structure)
-- 📦 **Reusability:** How does structure help with multiple tests?
-
-### Real-World Application
-
-- How would this scale to 50+ API operations?
-- Where do you draw the line between scaffolding and AI generation?
-- What parts of your current test suite could be scaffolded?
+**Where would automation help?**
+- Script: Create query files, update structure
+- AI: Generate assertions, test logic
 
 ---
 
 ## What You've Learned
 
-✅ **Scaffolding** creates consistent structure  
-✅ **AI** fills in creative test logic  
-✅ **Structure** enables code reuse and organization  
-✅ **Separation** between structure (scripted) and logic (AI-assisted)  
+✅ **Modular architecture** = maintainable + scalable tests  
+✅ **Separation of concerns** = change one thing, not everything  
+✅ **Scripts** = structure, **AI** = logic  
 
-## Next Steps
+**The complete picture:**
+1. Extract API calls (Assignment 2)
+2. Generate with scripts + AI (Assignment 2)  
+3. Organize in scalable architecture (Assignment 3)
 
-Think about your own API testing:
-- What structure would help your team?
-- Which tests could share queries/steps/utilities?
-- How would you balance automation vs. AI generation?
-
----
-
-## Time Breakdown
-
-- **Step 1:** 2 min (scaffold + explore)
-- **Step 2:** 10 min (manual AI-assisted)
-- **Step 3:** 8 min (bonus automation)
-- **Buffer:** Helps if AI is slow or needs iterations
-
-**Total:** ~20 minutes active work
-
+**You now have a system for production-ready, AI-assisted test generation!** 🎯

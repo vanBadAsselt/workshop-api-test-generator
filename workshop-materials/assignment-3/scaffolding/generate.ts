@@ -41,7 +41,7 @@ function main() {
   }
 
   const templatesDir = path.join(__dirname, 'templates');
-  const destDir = path.join(process.cwd(), 'api-tests', testName);
+  const destDir = path.join(process.cwd(), testName);
 
   // Check if test already exists
   if (fs.existsSync(destDir)) {
@@ -53,6 +53,7 @@ function main() {
 
   // Create directory structure
   createDirectory(destDir);
+  createDirectory(path.join(destDir, 'tests'));
   createDirectory(path.join(destDir, 'testdata'));
   createDirectory(path.join(destDir, 'helpers'));
   createDirectory(path.join(destDir, 'config'));
@@ -97,12 +98,14 @@ function main() {
   );
 
   // Create .gitkeep files for empty directories
+  fs.writeFileSync(path.join(destDir, 'tests', '.gitkeep'), '');
   fs.writeFileSync(path.join(destDir, 'queries', '.gitkeep'), '');
   fs.writeFileSync(path.join(destDir, 'steps', '.gitkeep'), '');
 
   console.log(`✓ Created API test structure at: ${destDir}`);
   console.log('\nGenerated files:');
   console.log(`  - ${testName}/main.ts`);
+  console.log(`  - ${testName}/tests/`);
   console.log(`  - ${testName}/testdata/`);
   console.log(`  - ${testName}/helpers/`);
   console.log(`  - ${testName}/config/`);
@@ -110,8 +113,9 @@ function main() {
   console.log(`  - ${testName}/steps/ (empty)`);
   console.log('\nNext steps:');
   console.log(`  1. Add your GraphQL queries to queries/`);
-  console.log(`  2. Define test scenarios in testdata/testdata.prd.ts`);
-  console.log(`  3. Run: k6 run api-tests/${testName}/main.ts`);
+  console.log(`  2. Create test files in tests/`);
+  console.log(`  3. Create step files in steps/`);
+  console.log(`  4. Run: k6 run ${testName}/main.ts`);
 }
 
 main();
