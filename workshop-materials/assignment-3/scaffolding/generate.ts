@@ -92,6 +92,12 @@ function main() {
   );
 
   copyTemplate(
+    path.join(templatesDir, 'helpers', 'graphql.ts.template'),
+    path.join(destDir, 'helpers', 'graphql.ts'),
+    testName
+  );
+
+  copyTemplate(
     path.join(templatesDir, 'config', 'options.smoke.json.template'),
     path.join(destDir, 'config', 'options.smoke.json'),
     testName

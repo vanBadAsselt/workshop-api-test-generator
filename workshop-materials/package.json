@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "extract:getCharacter:default": "tsx assignment-2/examples/extract-get-character.ts assignment-1-capture.har",
-    "extract:gql": "tsx assignment-2/examples/extract-gql-from-har.ts"
+    "extract:gql": "tsx assignment-2/examples/extract-gql-from-har.ts",
+    "scaffold:generate": "tsx assignment-3/scaffolding/generate.ts",
+    "scaffold:build": "tsx assignment-3/scaffolding/build.ts",
+    "test:superpowers": "ENV=dev TEST_TYPE=smoke k6 run assignment-3/scaffolding/superpowers/dist/main.js"
   },
   "keywords": [
     "workshop",
@@ -16,7 +19,11 @@
   "author": "Anaïs van Asselt",
   "license": "MIT",
   "devDependencies": {
+    "@types/k6": "^0.52.0",
     "@types/node": "^22.10.5",
+    "esbuild": "^0.24.0",
+    "fs-extra": "^11.2.0",
+    "tiny-glob": "^0.2.9",
     "tsx": "^4.19.2",
     "typescript": "^5.9.3"
   },

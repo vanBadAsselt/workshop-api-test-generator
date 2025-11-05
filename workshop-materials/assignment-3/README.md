@@ -32,62 +32,185 @@ api-tests/<testset>/
 Run the scaffolding generator:
 
 ```bash
-cd workshop-materials/assignment-3/scaffolding
-npx tsx generate.ts <testset>
+cd workshop-materials
+npm run scaffold:generate <testset>
 ```
 
 **Example:**
 ```bash
-npx tsx generate.ts superpowers
+npm run scaffold:generate superpowers
 ```
-This creates: `api-tests/superpowers/` with all 6 layers set up!
 
-### Step 2: Explore the Structure
+This creates: `assignment-3/scaffolding/superpowers/` with all 6 layers set up!
 
-Open `api-tests/<superpowers>/` and look at each file. Notice:
+### Step 2: Understand the Structure
+
+Open `superpowers/` and look at the structure. Notice:
 - ✅ **Structure is there** (folders, imports, placeholders)
 - ❓ **Logic is missing** (queries, steps, assertions)
 
-**Question for discussion:**
+The structure:
+```
+superpowers/
+├── main.ts              # Loads test data, calls test functions
+├── tests/               # Test functions (empty)
+├── steps/               # API call steps (empty)
+├── queries/             # GraphQL queries (empty)
+├── testdata/            # Environment-specific data
+├── config/              # Performance configs
+└── helpers/             # Types and utilities
+```
 
-Given the JSON from Assignment 2 (with URL, query, variables, response):
-
-1. **Where does the URL go?**
-2. **Where does the query go?**
-3. **Where do the variables/test data go?**
-4. **Where do the assertions go?**
-
-Take 2 minutes with your table to map it out.
+**Quick discussion:** Given your JSON from Assignment 2:
+- **Query** → `queries/` folder (as const export)
+- **Variables/test data** → `testdata/`
+- **API call** → `steps/` folder (function that makes the request)
+- **Test** → `tests/` folder (function that calls the step)
+- **Main** → Imports and runs the test function
 
 ### Step 3: Add One Test
 
-#### Create Query File
+We'll fill in 3 files to make one test work:
+
+#### 1. Create Query File
 
 **Ask AI:**
 ```
-Create a TypeScript file that exports this GraphQL query:
+Create a TypeScript file that exports this GraphQL query as a string constant:
+
 [paste query from GetCharacter-capture.json]
 
-Export as: export const getCharacter = `...query...`;
+Export as: export const getCharacterQuery = `...query...`;
 ```
 
-**Save to:** `api-tests/superpowers/queries/getCharacter.ts`
+**Save to:** `superpowers/queries/getCharacter.query.ts`
 
-#### Update Main
+#### 2. Create Step File
+
+//TODO
+Create a step function that:
+- Imports the query from queries/getCharacter.query.ts
+- Makes a POST request to the GraphQL URL
+- Takes characterId as parameter
+- Includes checks for status 200 and data existence
 
 **Ask AI:**
 ```
-Update main.ts [attach file] to use the query [attach queries/getCharacter.ts].
+Generate TypeScript code for a k6 API test step based on the GraphQL call in the attached JSON.
 
-Make a POST to the url with the query and add basic checks.
+STRUCTURE REQUIREMENTS:
+- Import the query from '../queries/<operationName>.query'
+- Import graphQl helper from '../helpers/graphql'
+- Import expectValidJson from '../helpers/utils'
+- Import expect from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js'
+- Function signature: export function <operationName>Step(parameterName: string, accessToken?: string)
+
+VARIABLES:
+- Use variables from the JSON provided with correct nesting
+
+ASSERTIONS (based on RESPONSE):
+- Validate the type of EVERY field in the response
+- For nested objects, create variables for each level
+- For arrays: validate first element if present, handle empty arrays
+- For null fields: assert null and skip nested properties
+- Ensure __typename matches exactly
+- Use camelCase naming
+- Wrap in try/catch with error logging
+
+RESPONSE FORMAT:
+Return ONLY the TypeScript code, no JSON wrapper, no markdown, no explanations.
+
+EXAMPLE:
+
+import { graphQl } from '../helpers/graphql';
+import { expectValidJson } from '../helpers/utils';
+import { expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
+import { getUserQuery } from '../queries/getUserQuery';
+
+export function getUserStep(scenario: any) {
+  const variables = { id: scenario.userId };
+  const response = graphQl.query(getUserQuery, variables);
+  const responseJson = expectValidJson(response);
+  
+  try {
+    const { user } = responseJson.data;
+    expect(user.id, 'User ID').to.be.a('string');
+    expect(user.name, 'Name').to.be.a('string');
+    expect(user.age, 'Age').to.be.a('number');
+    expect(user.active, 'Active').to.be.a('boolean');
+    
+    const { address } = user;
+    expect(address.city, 'City').to.be.a('string');
+    
+    expect(user.tags, 'Tags').to.be.an('array');
+    if (user.tags.length > 0) {
+      expect(user.tags[0], 'First Tag').to.be.a('string');
+    }
+  } catch (error) {
+    console.error('Error in getUserStep:', error);
+    console.error('Response JSON:', responseJson);
+    throw error;
+  }
+}
+
+NOW generate the step function based on the provided JSON. Return ONLY the TypeScript code.
 ```
 
-**Update:** `api-tests/superpowers/main.ts`
+**Save to:** `superpowers/steps/getCharacter.step.ts`
 
-#### Run It
+#### 3. Create Test File
+
+**Ask AI:**
+```
+Generate TypeScript code for a k6 test function based on the GraphQL step function.
+
+STRUCTURE REQUIREMENTS:
+- Import describe from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js'
+- Import the step function from '../steps/<operationName>.step'
+- Import TestScenario type from '../helpers/types'
+- Function signature: export function <operationName>Test(scenario: TestScenario)
+- Use describe() block with clear test description
+- Call the step function inside the describe block
+
+NAMING:
+- Test function: <operationName>Test (e.g., getCharacterTest, getUserTest)
+- Step function: <operationName>Step (e.g., getCharacterStep, getUserStep)
+- Use camelCase
+
+RESPONSE FORMAT:
+Return ONLY the TypeScript code, no JSON wrapper, no markdown, no explanations.
+
+EXAMPLE:
+
+import { describe } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
+import { getUserStep } from '../steps/getUserStep';
+
+export function getUserTest(scenario: any) {
+  describe('Should retrieve the correct user information', () => {
+    getUserStep(scenario);
+  });
+}
+
+NOW generate the test function. The step function takes parameters based on the GraphQL operation. Return ONLY the TypeScript code.
+```
+
+**Save to:** `superpowers/tests/getCharacter.test.ts`
+
+#### 4. Update Main
+
+**Ask AI:**
+```
+Update main.ts to:
+- Import testGetCharacter from './tests/getCharacter.test'
+- Call testGetCharacter(allData) in the default function
+```
+
+**Update:** `superpowers/main.ts`
+
+#### 5. Run It
 
 ```bash
-k6 run api-tests/superpowers/main.ts
+k6 run superpowers/main.ts
 ```
 
 **Does it work?** 🎯

@@ -1,4 +1,4 @@
-// Type definitions for {{name}} API tests
+// Type definitions for superpowers API tests
 
 export interface TestScenario {
   name: string;

@@ -1,0 +1,18 @@
+{
+  "scenarios": {
+    "getCharacterTestScenario": {
+      "executor": "per-vu-iterations",
+      "tags": {
+        "test_type": "smoke",
+        "test_name": "superpowers"
+      },
+      "exec": "getCharacterTestScenario",
+      "vus": 1,
+      "iterations": 1,
+      "maxDuration": "2m"
+    }
+  },
+  "thresholds": {
+    "checks": ["rate==1"]
+  }
+}

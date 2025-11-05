@@ -2,6 +2,8 @@ import { fail } from 'k6';
 import { Options } from 'k6/options';
 import { TestData } from './helpers/types';
 import { testData } from './testdata/testdata';
+import { getScenarioData } from './helpers/utils';
+import { getCharacterTest } from './tests/getCharacterTest';
 
 // 1. Retrieve K6 options
 const testType = __ENV.TEST_TYPE || 'smoke';
@@ -12,20 +14,16 @@ export const options: Options = JSON.parse(open(optionsFile));
 // 2. Retrieve test data
 const env = __ENV.ENV || 'prd';
 if (!env) {
-  fail('No ENV found. Set ENV=prd or ENV=tst');
+  fail('No ENV found. Set ENV=dev or ENV=prd');
 }
 
 const allData: TestData = testData[env as keyof typeof testData];
 
 // 3. Execute test scenarios
-export function exampleTestScenario() {
-  // TODO: Import and call your test functions here
+export function getCharacterTestScenario() {
   const scenario = getScenarioData(
     allData,
-    'exampleTestData'
+    'getCharacterTestData'
   );
-
-  console.log('{{Name}} API test running...');
-  console.log(`Using test data for environment: ${env}`);
-  //exampleTest(scenario);
+  getCharacterTest(scenario);
 }
