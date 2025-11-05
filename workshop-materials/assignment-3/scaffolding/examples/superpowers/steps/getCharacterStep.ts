@@ -7,6 +7,7 @@ export function getCharacterStep(scenario: any) {
   const variables = { id: scenario.characterId };
   const response = graphQl.query(getCharacterQuery, variables);
   const responseJson = expectValidJson(response);
+  console.log(responseJson);
 
   try {
     const { getCharacter } = responseJson.data;

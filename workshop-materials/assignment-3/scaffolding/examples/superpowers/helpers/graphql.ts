@@ -23,7 +23,7 @@ function query(
 ) {
   const scenarioName = exec.scenario.name;
   const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json; charset=utf-8',
   };
   
   if (accessToken) {
