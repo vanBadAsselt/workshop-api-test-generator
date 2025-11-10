@@ -1,0 +1,16 @@
+/**
+ * GraphQL Query: GetCharacter
+ * Fetches a character by ID with all details
+ */
+export const getCharacterQuery = `
+  query GetCharacter($id: ID!) {
+    getCharacter(id: $id) {
+      id
+      name
+      slug
+      totalPower
+    }
+  }
+`;
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "assignment-3-test-generator",
+  "version": "1.0.0",
+  "description": "K6 test generator from HAR files with AI-powered assertions",
+  "type": "module",
+  "scripts": {
+    "scaffold": "tsx scaffolding/generate.ts",
+    "generate": "npx tsx generators/add-test-from-har.ts superpowersTest ../wonder-woman.har GetCharacter --use-ai",
+    "test": "cd superpowersTest && npm install && npm run test:smoke"
+  },
+  "dependencies": {
+    "openai": "^4.67.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

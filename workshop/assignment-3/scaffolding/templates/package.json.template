@@ -1,0 +1,16 @@
+{
+  "name": "{{name}}-k6-tests",
+  "version": "1.0.0",
+  "description": "K6 performance tests for {{name}} API",
+  "scripts": {
+    "build": "tsc && npm run copy:config",
+    "copy:config": "mkdir -p dist/config && cp -r config/*.json dist/config/",
+    "watch": "tsc --watch",
+    "test:smoke": "npm run build && GRAPHQL_URL=${GRAPHQL_URL:-http://localhost:4000} ENV=${ENV:-dev} TEST_TYPE=smoke k6 run dist/main.js",
+    "test:load": "npm run build && GRAPHQL_URL=${GRAPHQL_URL:-http://localhost:4000} ENV=${ENV:-prd} TEST_TYPE=load k6 run dist/main.js"
+  },
+  "devDependencies": {
+    "@types/k6": "^0.52.0",
+    "typescript": "^5.6.3"
+  }
+}

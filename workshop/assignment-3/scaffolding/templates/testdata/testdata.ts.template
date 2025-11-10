@@ -1,0 +1,5 @@
+import { dev } from './testdata.dev.js';
+
+export const testData = {
+  dev,
+};

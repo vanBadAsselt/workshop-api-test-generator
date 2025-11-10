@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules and build artifacts in generated test sets
+*/node_modules/
+*/dist/
+
+# Keep templates and examples
+!templates/
+!examples/

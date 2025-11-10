@@ -1,0 +1,10 @@
+{
+  "tags": {
+    "test_type": "smoke",
+    "test_name": "{{name}}"
+  },
+  "thresholds": {
+    "checks": ["rate>0.99"]
+  },
+  "scenarios": {}
+}

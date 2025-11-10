@@ -1,0 +1,10 @@
+import { TestData } from '../helpers/types.js';
+
+export const dev: TestData = {
+  baseUrl: 'http://localhost:4000/',
+  scenarios: [
+    // TODO: Add your test scenarios here
+    // Example:
+    { name: 'exampleTestData', description: 'Example test data' }
+  ],
+};

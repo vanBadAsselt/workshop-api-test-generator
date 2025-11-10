@@ -1,0 +1,34 @@
+{
+  "name": "workshop-e2e-test-generator-materials",
+  "version": "1.0.0",
+  "description": "Workshop materials for E2E test generation from HAR files",
+  "private": true,
+  "scripts": {
+    "extract:getCharacter": "tsx assignment-2/examples/scripts/extract-graphql.ts wonder-woman.har GetCharacter",
+    "generate:test:ai": "tsx assignment-2/examples/scripts/generate-k6-test-ai.ts assignment-2/examples/scripts/graphql-output.json k6-test-ai.js",
+    "generate:test:basic": "tsx assignment-2/examples/scripts/generate-k6-test.ts assignment-2/examples/scripts/graphql-output.json k6-test-basic.js",
+    "generate:test:script": "tsx assignment-2/examples/scripts/generate-k6-test-script.ts assignment-2/examples/scripts/graphql-output.json k6-test-script.js",
+    "test:superpowers": "ENV=dev TEST_TYPE=smoke k6 run assignment-3/scaffolding/superpowers/dist/main.js"
+  },
+  "keywords": [
+    "workshop",
+    "e2e-testing",
+    "har",
+    "test-generation"
+  ],
+  "author": "Anaïs van Asselt",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/k6": "^0.52.0",
+    "@types/node": "^22.10.5",
+    "esbuild": "^0.24.0",
+    "fs-extra": "^11.2.0",
+    "tiny-glob": "^0.2.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "openai": "^6.7.0",
+    "ts-node": "^10.9.2"
+  }
+}

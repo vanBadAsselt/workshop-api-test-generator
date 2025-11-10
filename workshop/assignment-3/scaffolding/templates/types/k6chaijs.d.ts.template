@@ -1,0 +1,31 @@
+// Type declarations for k6chaijs library loaded from URL
+declare module 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js' {
+  export function describe(name: string, fn: () => void): void;
+
+  export interface Assertion {
+    to: {
+      equal(expected: any): void;
+      be: {
+        a(type: string): void;
+        an(type: string): void;
+      };
+      exist: void;
+      have: {
+        property(name: string): void;
+        length(length: number): void;
+        validJsonBody(): void;
+      };
+    };
+    not: {
+      to: {
+        equal(expected: any): void;
+        be: {
+          a(type: string): void;
+          an(type: string): void;
+        };
+      };
+    };
+  }
+
+  export function expect(value: any, message?: string): Assertion;
+}

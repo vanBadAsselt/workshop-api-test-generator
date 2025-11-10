@@ -1,0 +1,64 @@
+{
+  "request": {
+    "url": "http://localhost:4000/",
+    "operationName": "GetCharacter",
+    "query": "query GetCharacter($id: ID!) {\n  getCharacter(id: $id) {\n    id\n    name\n    slug\n    totalPower\n    image {\n      url\n      __typename\n    }\n    powerstats {\n      intelligence\n      strength\n      speed\n      durability\n      power\n      combat\n      __typename\n    }\n    biography {\n      fullName\n      aliases\n      placeOfBirth\n      alignment\n      publisher\n      firstAppearance\n      __typename\n    }\n    appearance {\n      gender\n      race\n      height\n      weight\n      __typename\n    }\n    work {\n      occupation\n      base\n      __typename\n    }\n    __typename\n  }\n}",
+    "variables": {
+      "id": "1002"
+    }
+  },
+  "response": {
+    "data": {
+      "getCharacter": {
+        "id": "1002",
+        "name": "Wonder Woman",
+        "slug": "wonder-woman",
+        "totalPower": 567,
+        "image": {
+          "url": "https://robohash.org/Wonder+Woman.png?set=set2&size=400x400",
+          "__typename": "Image"
+        },
+        "powerstats": {
+          "intelligence": "88",
+          "strength": "100",
+          "speed": "79",
+          "durability": "100",
+          "power": "100",
+          "combat": "100",
+          "__typename": "Powerstats"
+        },
+        "biography": {
+          "fullName": "Diana Prince",
+          "aliases": [
+            "Princess Diana",
+            "Princess of the Amazons"
+          ],
+          "placeOfBirth": "Themyscira",
+          "alignment": "good",
+          "publisher": "DC Comics",
+          "firstAppearance": "All Star Comics #8",
+          "__typename": "Biography"
+        },
+        "appearance": {
+          "gender": "Female",
+          "race": "Amazon",
+          "height": [
+            "6'0",
+            "183 cm"
+          ],
+          "weight": [
+            "165 lb",
+            "74 kg"
+          ],
+          "__typename": "Appearance"
+        },
+        "work": {
+          "occupation": "Princess",
+          "base": "Themyscira, Gateway City",
+          "__typename": "Work"
+        },
+        "__typename": "Character"
+      }
+    }
+  }
+}

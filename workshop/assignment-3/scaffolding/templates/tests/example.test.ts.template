@@ -1,0 +1,16 @@
+import { TestData } from '../helpers/types';
+import { getCharacter } from '../steps/getCharacter.step';
+
+/**
+ * Test: Get Character
+ * Tests the getCharacter GraphQL operation
+ */
+export function testGetCharacter(data: TestData) {
+  // TODO: Call your step function with appropriate test data
+  // Example:
+  // const characterId = data.characterId || '1001';
+  // getCharacter(characterId);
+  
+  console.log('Test: Get Character');
+}
+
