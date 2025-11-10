@@ -23,7 +23,7 @@ Extract the GetCharacter GraphQL operation from the HAR file I provided. Output 
 - response: the full response body
 ```
 
-3. **Attach:** `assignment-1-capture.har` (or use the one in the repo)
+3. **Attach:** `assignment-1-capture.har` (or use the `wonder-woman.har` in the repo)
 4. **Save the output** as `GetCharacter-manual.json`
     - How many tokens does the JSON have? 
 
@@ -72,15 +72,10 @@ Now use the extracted JSON to generate a test with a script.
 **Ask AI:**
 
 ```
-Create a TypeScript script that generates a k6 test from a GraphQL JSON file.
+Create a TypeScript script that generates a k6 test from a GraphQL JSON.
 
-Input: JSON file with { request: { url, operationName, query, variables }, response: {...} }
-Output: Complete k6 test that:
-- Makes the GraphQL POST request
-- Includes basic assertion (status code 200)
-- Includes basic body check (response has data)
-
-Keep assertions simple for now - just basic structure.
+Input: JSON file with { request, response }
+Output: Runnable k6 test
 ```
 
 ### 3B: Run the Generator
@@ -114,15 +109,12 @@ Our basic script generates structure, but the assertions are generic. Let's see 
 
 **Ask AI:**
 ```
-Rewrite the test generation script to add smart contract assertions by analyzing the response structure.
+Rewrite the script to add smart and readable contract assertions by analyzing the response structure.
 
-Generate type-based contract checks for each field:
+Generate deterministic checks:
 - Type validation (string, number, array, object)
 - Required fields are non-null/non-empty
-- Array fields have expected length
-- Response structure matches expected schema
-
-Do this deterministically by parsing the sample response JSON.
+- Response structure matches schema
 ```
 
 **Save as:** `generate-k6-test-smart.ts`

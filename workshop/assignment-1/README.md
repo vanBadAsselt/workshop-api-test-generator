@@ -33,13 +33,11 @@ In this assignment, you'll capture real user interactions and let AI generate a 
    - ✅ Check "Preserve log"
    - 🗑️ Clear existing entries (trash icon)
 4. **Interact with the app:**
-   - Search for "wonder"
    - Click "Details" on any character
-   - Close the details view
 5. **Export HAR file:**
    - Got to in Network tab
    - Click small icon 'Export HAR' (arrow down icon)
-   - Save as `assignment-1-capture.har` in this folder
+   - Save as `assignment-1-capture.har` in this folder (or use `wonder-woman.har` in the /examples folder)
 
 ## Step 2: Generate test with AI
 
@@ -48,8 +46,7 @@ In this assignment, you'll capture real user interactions and let AI generate a 
 3. **Use this prompt:**
 
 ```
-You are an expert test automation engineer. Attached is a HAR file from a web application called “Superpowers”, where users can compare the powers of heroes and villains.
-Generate a K6 test script based on the GetCharacter API call you can find in this HAR file.
+You are an expert test automation engineer. Attached is a HAR file from a web application called “Superpowers”, where users can compare the powers of heroes and villains. Generate a K6 test script based on the GetCharacter GraphQL API call you can find in this HAR file.
 ```
 
 4. **Save the generated script** as `generated-test.js` in this folder
@@ -76,14 +73,6 @@ We'll discuss as a group:
 - 🙋 **Who got a working test?**
 - 🙋 **Who got a broken test?**
 - 🤔 **What is your test actually validating?**
-- 💡 **Key insight:** Even a "perfect" script is meaningless without knowing the **test goal**
-
-Any concerns about this test? When generating all API tests like this? 
-how many tokens per HAR file? (500000) 
-more tokens is expensive
-Instability of huge prompts/hallucinations
-Privacy - any sensitive data that could be in the HAR? 
-Want to be more in control - filter out the call we want to test
 
 ## Troubleshooting
 
@@ -99,6 +88,9 @@ Want to be more in control - filter out the call we want to test
 
 **HAR file too large:**
 - That's normal! HAR files include all content. Try it with the HAR file in this repo `assignment-1-capture.har`
+
+**AI generated broken code:**
+Try this prompt: "The test you generated has an error on line X. Can you fix it?"
 
 ## Next Steps
 
