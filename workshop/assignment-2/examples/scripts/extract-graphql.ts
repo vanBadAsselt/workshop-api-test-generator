@@ -1,6 +1,6 @@
 // extract-graphql.ts
-// npm install -g ts-node typescript
-// ts-node extract-graphql.ts wonder-woman.har GetCharacter
+// npm install -g tsx
+// tsx extract-graphql.ts wonder-woman.har GetCharacter
 
 import * as fs from "fs";
 

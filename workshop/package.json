@@ -4,8 +4,10 @@
   "description": "Workshop materials for E2E test generation from HAR files",
   "private": true,
   "scripts": {
-    "extract:getCharacter:default": "tsx assignment-2/examples/extract-get-character.ts assignment-1-capture.har",
-    "extract:gql": "tsx assignment-2/examples/extract-gql-from-har.ts",
+    "extract:getCharacter": "tsx assignment-2/examples/scripts/extract-graphql.ts wonder-woman.har GetCharacter",
+    "generate:test:ai": "tsx assignment-2/examples/scripts/generate-k6-test-ai.ts assignment-2/examples/scripts/graphql-output.json k6-test-ai.js",
+    "generate:test:basic": "tsx assignment-2/examples/scripts/generate-k6-test.ts assignment-2/examples/scripts/graphql-output.json k6-test-basic.js",
+    "generate:test:script": "tsx assignment-2/examples/scripts/generate-k6-test-script.ts assignment-2/examples/scripts/graphql-output.json k6-test-script.js",
     "test:superpowers": "ENV=dev TEST_TYPE=smoke k6 run assignment-3/scaffolding/superpowers/dist/main.js"
   },
   "keywords": [
