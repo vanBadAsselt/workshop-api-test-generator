@@ -1,0 +1,11 @@
+import { TestData } from "../helpers/types.js";
+
+export const prd: TestData = {
+  baseUrl: "https://api.production.com/",
+  scenarios: [
+    {
+      name: "exampleTestData",
+      description: "Example test data for production",
+    },
+  ],
+};

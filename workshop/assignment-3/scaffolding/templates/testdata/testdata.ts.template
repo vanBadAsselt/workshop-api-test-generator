@@ -1,4 +1,4 @@
-import { dev } from './testdata.dev';
+import { dev } from './testdata.dev.js';
 
 export const testData = {
   dev,

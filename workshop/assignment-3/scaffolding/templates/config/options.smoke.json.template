@@ -3,9 +3,8 @@
     "test_type": "smoke",
     "test_name": "{{name}}"
   },
-  "vus": 1,
-  "iterations": 1,
   "thresholds": {
     "checks": ["rate>0.99"]
-  }
+  },
+  "scenarios": {}
 }

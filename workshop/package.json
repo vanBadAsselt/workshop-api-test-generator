@@ -6,8 +6,6 @@
   "scripts": {
     "extract:getCharacter:default": "tsx assignment-2/examples/extract-get-character.ts assignment-1-capture.har",
     "extract:gql": "tsx assignment-2/examples/extract-gql-from-har.ts",
-    "scaffold:generate": "tsx assignment-3/scaffolding/generate.ts",
-    "scaffold:build": "tsx assignment-3/scaffolding/build.ts",
     "test:superpowers": "ENV=dev TEST_TYPE=smoke k6 run assignment-3/scaffolding/superpowers/dist/main.js"
   },
   "keywords": [

@@ -2,6 +2,12 @@
 // Simple API test scaffolding generator
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 function usage() {
   console.error('Usage: tsx generate.ts <testName>');
@@ -59,6 +65,7 @@ function main() {
   createDirectory(path.join(destDir, 'config'));
   createDirectory(path.join(destDir, 'queries'));
   createDirectory(path.join(destDir, 'steps'));
+  createDirectory(path.join(destDir, 'types'));
 
   // Copy and process templates
   copyTemplate(
@@ -70,6 +77,12 @@ function main() {
   copyTemplate(
     path.join(templatesDir, 'testdata', 'testdata.ts.template'),
     path.join(destDir, 'testdata', 'testdata.ts'),
+    testName
+  );
+
+  copyTemplate(
+    path.join(templatesDir, 'testdata', 'testdata.dev.ts.template'),
+    path.join(destDir, 'testdata', 'testdata.dev.ts'),
     testName
   );
 
@@ -103,6 +116,32 @@ function main() {
     testName
   );
 
+  // Copy package.json and tsconfig.json
+  copyTemplate(
+    path.join(templatesDir, 'package.json.template'),
+    path.join(destDir, 'package.json'),
+    testName
+  );
+
+  copyTemplate(
+    path.join(templatesDir, 'tsconfig.json.template'),
+    path.join(destDir, 'tsconfig.json'),
+    testName
+  );
+
+  // Copy type declarations
+  copyTemplate(
+    path.join(templatesDir, 'types', 'k6chaijs.d.ts.template'),
+    path.join(destDir, 'types', 'k6chaijs.d.ts'),
+    testName
+  );
+
+  copyTemplate(
+    path.join(templatesDir, 'types', 'globals.d.ts.template'),
+    path.join(destDir, 'types', 'globals.d.ts'),
+    testName
+  );
+
   // Create .gitkeep files for empty directories
   fs.writeFileSync(path.join(destDir, 'tests', '.gitkeep'), '');
   fs.writeFileSync(path.join(destDir, 'queries', '.gitkeep'), '');
@@ -111,6 +150,8 @@ function main() {
   console.log(`✓ Created API test structure at: ${destDir}`);
   console.log('\nGenerated files:');
   console.log(`  - ${testName}/main.ts`);
+  console.log(`  - ${testName}/package.json`);
+  console.log(`  - ${testName}/tsconfig.json`);
   console.log(`  - ${testName}/tests/`);
   console.log(`  - ${testName}/testdata/`);
   console.log(`  - ${testName}/helpers/`);
@@ -118,10 +159,10 @@ function main() {
   console.log(`  - ${testName}/queries/ (empty)`);
   console.log(`  - ${testName}/steps/ (empty)`);
   console.log('\nNext steps:');
-  console.log(`  1. Add your GraphQL queries to queries/`);
-  console.log(`  2. Create test files in tests/`);
-  console.log(`  3. Create step files in steps/`);
-  console.log(`  4. Run: k6 run ${testName}/main.ts`);
+  console.log(`  1. cd ${testName} && npm install`);
+  console.log(`  2. Add tests using: npx tsx ../generators/add-test-from-har.ts . <harFile> <operationName>`);
+  console.log(`  3. Build and run: npm run test:smoke`);
+  console.log('\nSee RUN-TESTS.md for detailed instructions.');
 }
 
 main();

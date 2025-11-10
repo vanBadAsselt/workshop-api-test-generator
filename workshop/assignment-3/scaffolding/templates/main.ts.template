@@ -1,7 +1,8 @@
 import { fail } from 'k6';
 import { Options } from 'k6/options';
-import { TestData } from './helpers/types';
-import { testData } from './testdata/testdata';
+import { TestData } from './helpers/types.js';
+import { testData } from './testdata/testdata.js';
+import { getScenarioData } from './helpers/utils.js';
 
 // 1. Retrieve K6 options
 const testType = __ENV.TEST_TYPE || 'smoke';
